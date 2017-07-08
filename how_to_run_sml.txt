@@ -1,0 +1,1 @@
+open your commandline and run the command: 'bash sml.sh' or 'chmod +x sml.sh' then './sml.sh'

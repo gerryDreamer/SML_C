@@ -1,0 +1,105 @@
+
+               					SIMPLETRON MACHINE LANGUAGE
+
+﻿  SML is a software based computer simulator which is capable of executing instructions written in Simpletron Machine Language (SML)  
+  Simpletron contains an accumulator – a special register in which information is put before it uses in calculations and or examined in
+  various ways It has memory of size 100 words (can be extended) each word can be referenced by their location 00, 01, 02, …., 99 
+  Word is a signed four digit decimal number such as +3364, -1293, +0007, -0001 SML instructions occupies one word of the Simpletron’s
+  Memory SML instruction will always be positive SML data can be positive or negative The first two digits of the SML instruction are
+  the operation code The last two digits of the SML instruction are the operand (i.e memory location of the operand).
+   
+                                              i. SML Operations
+             1. Input/Output Operations
+             2. Load/Store Operations
+             3. Arithmetic Operations
+             4. Transfer of Control Operations
+             
+                                              ii. SML Operation Codes
+                                              
+                                             a. Input/Output Operations:
+               10 - Reads a word from the terminal into specific location in memory
+                  Example: +1080 – Read w word from the terminal into the memory with location 80
+             
+	       11 -Writes a word from a specific location in memory to the terminal.
+		    Example: +3075 – write the contents of the word with location 75 to the terminal
+		
+                                              b. Load/Store Operations:
+	       20 – Loads a word from the specific location in memory into the accumulator, +2074 – Loads the contents of the word
+		    with location 74 into the accumulator
+	       21 – Stores a word from the accumulator into a specific location in memory Example: +2165 – Stores the contents of the
+		  accumulator into the word with location 65
+		  
+                                               c. Arithmetic Operations:	       
+        31 – Subtracts a word in specific location in memory from the word in the Accumulator (leaves the result in Accumulator)
+             Example: +3160 - Subtracts the contents of the word with location 60 from the Accumulator and the result is kept with
+              Accumulator
+	32 – Divide a word in specific location in memory with the contents of the Accumulator (leaves result in Accumulator), 
+	  +3280 – Divides the contents of the word in location 80 with the accumulator and the result is kept with Accumulator
+	33 – Multiply a word from a specific location in memory by the contents of the accumulator (leave result in Accumulator) Example: 		+3390 – Multiply the contents of the word in location 90 with the contents of the accumulator and the result is kept with
+	 Accumulator
+						d. Transfer of Control Operations:
+	40 – Branch to a specific location in memory Example: +4020 – branch to location 20 (i.e. next instruction to execute is at
+	 location 20)
+	41 – Branch to a specific location in memory if the accumulator is negative Example: +4115 – Branch to instruction at location 15
+	 if the accumulator is negative
+	42 – Branch to a specific location in memory if the accumulator is zero Example: +4225 – Branch to instruction at location 25 if
+	 the accumulator is zero
+	43 – Halt (program has completed its task) 
+        34 - performs remainder operations, 3488
+        35 - performs exponential functions.
+        
+                        Sample program on the gnome-terminal: 
+
+						*** Welcome to Simpletron *** 
+						*** Please Enter your Program one instrution  *** 
+						*** (or Data word) at a time. I will type the *** 
+						 *** location number and question mark (?).   *** 
+						 *** You then type the word for that location.*** 
+						 *** Type the senitel -99999 to stop entering *** 
+						 *** your Program  ***
+						 
+						       00 ? +1099
+						       01 ? +1098
+						       02 ? +2099
+						       03 ? +3398
+						       04 ? +2150 
+						       05 ? +1150 
+						       06 ? +1199 
+						       07 ? +1198
+						       08 ? +4300 
+						       09 ? -99999
+						       
+ 						****START SIMPLETRON EXECUTION***********
+	Enter an integer: 4 
+	Enter an integer: 9 
+	Content of 50: 
+	36 Content of 99: 
+	4 Content of 98: 9
+					 ***************SIMPLETRON EXECUTION TERMINATED**************
+						*********** END SIMPLETRON EXECTION****************
+						
+						Sample Memory Dump:
+			  REGISTERS:
+			  accumulator          +0036
+			  instructionCounter      08 
+			  instructionRegister  +4300
+			  operationalCode         43 
+			  operand                 00
+			  
+			  MEMORY :
+				      0     1     2     3     4    5     6     7     8     9  
+					0  +1099 +1098 +2099 +3398 +2150 +1150 +1199 +1198 +4300 +0000 
+					10 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					20 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					30 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					40 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					50 +0036 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					60 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					70 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					80 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000
+					90 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0000 +0009 +0004 
+					
+Written by: Gerishom Muzembi (Dreamer Ventures)
+Contact: gwadunga5@gmail.com
+
+

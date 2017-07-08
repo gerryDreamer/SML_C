@@ -1,0 +1,24 @@
+To run this program
+open your terminal 
+and run the config.sh script
+after successful compilation
+open your home directory and then go to Documents/c/sml/
+as in, $HOME/Documents/c/sml/
+there, the configuration script will have set up a how_to_file 
+and a shell script (sml.sh) which will be used
+for compilation of the c files
+a how_to_run_sml text file will be generated
+follow the steps in the file
+and you will be able to run the program
+!!!thats all for now!!!
+
+Compiled by: Gerry Dreamer Ventures
+  
+Arigatoasmaista!!! (Japonais(e))
+Bien merci beacoup!!! (Francais)
+Asantee!! (Swahili)
+Danke!!! (Loose Deutsche)
+Thank You!!! (Anglais)
+Asande sanaa!! (Native Luhya) 
+Ni wega munu!!! (Native Gikuyu)
+pata pat... 

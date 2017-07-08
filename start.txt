@@ -1,0 +1,6 @@
+    Simpletron Machine Language Simulator version 1.0.0,
+    Copyright (C) 2017 Gerry Dreamer Ventures
+    SML comes with ABSOLUTELY NO WARRANTY; for details see the license accompanied
+    by this installation, This is free software, and you are welcome to redistribute it
+    under certain conditions; see the license for details, 
+    or type w for details and quit, or c to continue.
